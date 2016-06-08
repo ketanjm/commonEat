@@ -10,6 +10,9 @@
       <th>Paid by amar</th>
       <th>Paid by akbar</th>
       <th>Paid by anthony</th>
+      <th>amar was present</th>
+      <th>akbar was present </th>
+      <th>anthony was present </th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +25,9 @@
         <td><%= event.paid_by_amar %></td>
         <td><%= event.paid_by_akbar %></td>
         <td><%= event.paid_by_anthony %></td>
+        <td><%= event.amar_present %></td>
+        <td><%= event.akbar_present %></td>
+        <td><%= event.anthony_present %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
