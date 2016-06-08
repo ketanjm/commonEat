@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event Type:</strong>
+  <%= @event.event_type %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<p>
+  <strong>Total amount:</strong>
+  <%= @event.total_amount %>
+</p>
+
+<p>
+  <strong>amar was there?:</strong>
+  <%= @event.amar_present %>
+
+  <strong>Paid by amar:</strong>
+  <%= @event.paid_by_amar %>
+</p>
+
+<p>
+  <strong>akbar was there?:</strong>
+  <%= @event.paid_by_akbar %>
+
+  <strong>Paid by akbar:</strong>
+  <%= @event.akbar_present %>
+</p>
+
+<p>
+  <strong>anthony was there?:</strong>
+  <%= @event.anthony_present %>
+
+  <strong>Paid by anthony:</strong>
+  <%= @event.paid_by_anthony %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', report_events_path %>
+

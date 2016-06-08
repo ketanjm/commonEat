@@ -1,0 +1,62 @@
+<%= form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+    <%= f.label :event_type %><br>
+    <%= f.select :event_type, Event.event_types %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :total_amount %><br>
+    <%= f.text_field :total_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :paid_by_amar %><br>
+    <%= f.text_field :paid_by_amar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amar_present  %><br>
+    <%= f.check_box :amar_present %>
+  </div>
+
+  <div class="field">
+    <%= f.label :paid_by_akbar %><br>
+    <%= f.text_field :paid_by_akbar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :akbar_present  %><br>
+    <%= f.check_box :akbar_present %>
+  </div>
+
+  <div class="field">
+    <%= f.label :paid_by_anthony %><br>
+    <%= f.text_field :paid_by_anthony %>
+  </div>
+
+  <div class="field">
+    <%= f.label :anthony_present  %><br>
+    <%= f.check_box :anthony_present %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
